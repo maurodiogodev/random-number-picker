@@ -1,0 +1,67 @@
+.logo {
+    margin-block: 8rem 9.2rem;
+}
+
+main {
+    & header {
+        & p {
+            font: var(--overline);
+            margin-bottom: 1.2rem;
+            background: linear-gradient(90deg,
+                    var(--content-secondary) 0%,
+                    var(--background-gray) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        & h1 {
+            max-width: 52rem;
+            font: var(--display-large);
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    .app-info {
+        display: flex;
+        flex-direction: column;
+        gap: 3.6rem;
+
+        & div {
+            display: flex;
+            gap: .8rem;
+            align-items: flex-start;
+
+            & p {
+                max-width: 35.8rem;
+                font: var(--paragraph-small);
+
+                & strong {
+                    display: block;
+                    color: var(--content-brand);
+                    font: var(--paragraph-medium);
+                }
+            }
+        }
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        margin-block: 3.4rem;
+
+        & .text-content {
+            & h2 {
+                font: var(--label-medium);
+            }
+
+            & p {
+                max-width: 48.2rem;
+                color: var(--content-secondary);
+                font: var(--paragraph-large);
+            }
+        }
+    }
+}

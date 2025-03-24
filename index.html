@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="logo">
+    <div class="container logo">
         <img src="./assets/logo.svg" alt="Logo">
     </div>
 
@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <aside>
+        <aside class="container">
             <div class="text-content">
                 <h2>Quero sortear:</h2>
                 <p>
@@ -54,35 +54,45 @@
             </div>
             <form>
                 <fieldset class="input-fields">
-                    <label for="quantity-number">Números</label>
-                    <input type="number" id="quantity" name="quantity" min="1" required>
+                    <div class="fields">
+                        <div class="input-wrapper">
+                            <label for="quantity-number">Números</label>
+                            <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+                        </div>
 
-                    <label for="min-number">De:</label>
-                    <input type="number" id="min-number" name="min-number" min="1" required>
+                        <div class="input-wrapper">
+                            <label for="min-number">De</label>
+                            <input type="number" id="min-number" name="min-number" min="1" max="998" required>
+                        </div>
 
-                    <label for="max-number">Até:</label>
-                    <input type="number" id="max-number" name="max-number" max="100" required>
-                </fieldset>
-
-                <div class="switch-repetition-number">
-                    <div class="switch-wrapper">
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
+                        <div class="input-wrapper">
+                            <label for="max-number">Até</label>
+                            <input type="number" id="max-number" name="max-number" min="1" max="999" required>
+                        </div>
                     </div>
-                    <label>Não repetir número</label>
-                </div>
 
-                <div class="result-container" id="result-container">
+                    <div class="switch-repetition-number">
+                        <div class="switch-wrapper">
+                            <label class="switch">
+                                <input type="checkbox" id="repetition-switch">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <label for="repetition-switch">Não repetir número</label>
+                    </div>
 
-                    <h2>Resultado do sorteio</h2>
-                    <ul id="result-list">
-                        <li>23</li>
-                        <li>12</li>
-                    </ul>
+                    <div class="result-container" id="result-container">
 
-                </div>
+                        <h2>Resultado do sorteio</h2>
+                        <p id="result-message">1° Resultado</p>
+                        <ul id="result-list">
+                            <li>23</li>
+                            <li>12</li>
+                        </ul>
+
+                    </div>
+
+                </fieldset>
 
                 <button type="button" id="sort-numbers-button">
                     Sortear
